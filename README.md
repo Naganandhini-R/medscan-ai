@@ -4,7 +4,7 @@
 
 ---
 
-## 🛑 The Core Problem
+##  The Core Problem
 
 * **Global Crisis:** A massive volume of counterfeit medicines are circulating in developing nations, acting as substandard or falsified medical products.
 * **Security Failure:** Traditional holograms and 2D barcodes are easily cloned by sophisticated counterfeiters.
@@ -12,12 +12,12 @@
 
 ---
 
-## 🎯 Our Mission
+##  Our Mission
 To save lives and economic loss by creating a "Digital Twin" verification system that validates both the **Physical Item** (via AI) and its **Digital History** (via Blockchain).
 
 ---
 
-## 🧩 Abstract & Solution Architecture
+##  Abstract & Solution Architecture
 **MedScan-AI** is a dual-layered security framework designed to detect counterfeit medicines by verifying packaging aesthetics and digital provenance simultaneously.
 
 ### The Hybrid Approach:
@@ -31,7 +31,7 @@ To save lives and economic loss by creating a "Digital Twin" verification system
 
 ---
 
-## 🔬 Technical "Secret Sauce"
+##  Technical "Secret Sauce"
 
 ### 1. AI Computer Vision Pipeline (The Eyes)
 * **Logo Detection:** Uses ORB algorithms to match feature keypoints against the official master template.
@@ -46,7 +46,7 @@ To save lives and economic loss by creating a "Digital Twin" verification system
 
 ---
 
-## 🚀 System Specifications
+## System Specifications
 
 ### Hardware Requirements
 * **Server:** Quad-core CPU, 16GB RAM, SSD Storage (for AI Processing & Blockchain Node).
@@ -63,7 +63,7 @@ To save lives and economic loss by creating a "Digital Twin" verification system
 
 ---
 
-## ⚙️ The Proposed System & Methodology
+##  The Proposed System & Methodology
 ### The Sequential Authentication Pipeline
 
 1. **Manufacturer Verification:** Central Admin approves the license; manufacturer is granted "Verified" status.
@@ -76,7 +76,7 @@ To save lives and economic loss by creating a "Digital Twin" verification system
 
 ---
 
-## 🛠️ Key Features
+##  Key Features
 * **AI Vision Pipeline:** Micro-printed logo and layout verification.
 * **Immutable Ledger:** Blockchain-based batch tracking.
 * **Forensic Reporting:** Instant notification to manufacturers upon counterfeit detection.
@@ -84,7 +84,7 @@ To save lives and economic loss by creating a "Digital Twin" verification system
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 * `/mobile`: React Native application for consumers.
 * `/backend`: FastAPI server for AI processing and API management.
 * `/blockchain`: Smart contracts and blockchain integration scripts.

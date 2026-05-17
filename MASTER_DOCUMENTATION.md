@@ -15,19 +15,19 @@ This document is the **Top-to-Bottom Master Reference** for the MedScan-AI ecosy
 ## 2. Complete System Architecture
 MedScan-AI operates as a highly distributed, microservice-like architecture:
 
-### 📱 Client Tier (Consumer & Admin)
+### Client Tier (Consumer & Admin)
 * **React Native Mobile App:** Consumer-facing application. Uses device camera for high-resolution image capture. Communicates via REST APIs (`fetch`).
 * **Merchant Web Portal:** HTML5/Vanilla JS dashboard where manufacturers register batches, view clone outbreak heatmaps, and manage their authentication profiles.
 
-### 🌐 API Network Tier (FastAPI Backend)
+### API Network Tier (FastAPI Backend)
 * **FastAPI Framework:** High-performance Python backend listening on port 8000. Handles routing for `/api/v1/scan`, `/api/v1/auth`, `/api/v1/report`, and `/api/v1/analytics`.
 * **Rate Limiting (SlowAPI):** Protects endpoints from DDoS attacks (e.g., limits `/verify` to 5 scans per minute per IP).
 
-### ⚙️ Asynchronous Task Processing (Celery & Redis)
+### Asynchronous Task Processing (Celery & Redis)
 * **The Problem:** AI Image processing and Blockchain verification take variable amounts of time and would freeze the Mobile App if done synchronously.
 * **The Solution:** Scans are immediately offloaded to a Celery Task Queue running on a Redis Broker. The backend immediately returns `"status": "PROCESSING"` to the Mobile App, which then polls for the final result gracefully.
 
-### 🧠 The Core Intelligence (AI, DB & Blockchain)
+###  The Core Intelligence (AI, DB & Blockchain)
 * **OpenCV Vision Engine:** Processes the images.
 * **External Medical Databases:** Live API connections to US FDA (OpenFDA) and NIH RxNorm to cross-verify the chemicals (salts) if OCR text is ambiguous.
 * **Ethereum Blockchain Node:** Hardhat/Web3.py node storing smart contracts (`MedicineBatchRegistry.sol`).

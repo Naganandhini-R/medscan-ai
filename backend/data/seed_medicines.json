@@ -1,0 +1,28 @@
+[
+    {
+        "batchId": "GF244009",
+        "name": "Rubired Z",
+        "salt": "Ferrous Ascorbate, Folic Acid, Zinc Sulphate",
+        "dosage": "1 capsule daily after a meal or as directed by the physician.",
+        "usage": "Used for treatment of Iron deficiency anemia and nutritional deficiencies.",
+        "side_effects": "Mild stomach upset, dark stools, or nausea.",
+        "storage": "Store in a cool and dry place. Protect from direct light.",
+        "interactions": "Do not take with antacids or dairy products for 2 hours.",
+        "manufacturer": "MACLEODS PHARMACEUTICALS LTD.",
+        "mfg": "2024-07-01",
+        "exp": "2026-06-30"
+    },
+    {
+        "batchId": "INC2570",
+        "name": "Megaferon",
+        "salt": "Iron Polymaltose Complex",
+        "dosage": "5ml to 10ml daily for adults or as prescribed.",
+        "usage": "Effective for quick restoration of iron levels in the body.",
+        "side_effects": "Constipation or diarrhea (temporary).",
+        "storage": "Store at room temperature. Keep bottle tightly closed.",
+        "interactions": "Tell your doctor if you are taking antibiotics like Tetracycline.",
+        "manufacturer": "Aristo Pharmaceuticals",
+        "mfg": "2024-01-01",
+        "exp": "2026-12-01"
+    }
+]

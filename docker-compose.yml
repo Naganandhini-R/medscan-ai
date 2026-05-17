@@ -1,0 +1,116 @@
+services:
+
+  postgres:
+    image: postgres:15-alpine
+    container_name: medscan_db
+    restart: always
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+      POSTGRES_DB: ${POSTGRES_DB:-medscan}
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-postgres} -d ${POSTGRES_DB:-medscan}" ]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      - medscan_net
+
+  redis:
+    image: redis:7-alpine
+    container_name: medscan_redis
+    restart: always
+    ports:
+      - "6379:6379"
+    networks:
+      - medscan_net
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: medscan_backend
+    restart: always
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      POSTGRES_SERVER: postgres
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+      POSTGRES_DB: ${POSTGRES_DB:-medscan}
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      DATABASE_URL: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@postgres/${POSTGRES_DB:-medscan}
+      GANACHE_URL: http://blockchain:8545
+      CONTRACT_ADDRESS: ${CONTRACT_ADDRESS}
+      ETH_PRIVATE_KEY: ${ETH_PRIVATE_KEY}
+    volumes:
+      - ./backend/app:/app/app
+      - scan_uploads:/app/temp
+      - ./backend/logs:/app/logs
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_started
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+    networks:
+      - medscan_net
+
+  worker:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: medscan_worker
+    restart: always
+    env_file:
+      - .env
+    environment:
+      POSTGRES_SERVER: postgres
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+      POSTGRES_DB: ${POSTGRES_DB:-medscan}
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      DATABASE_URL: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@postgres/${POSTGRES_DB:-medscan}
+      GANACHE_URL: http://blockchain:8545
+      CONTRACT_ADDRESS: ${CONTRACT_ADDRESS}
+      ETH_PRIVATE_KEY: ${ETH_PRIVATE_KEY}
+    volumes:
+      - ./backend/app:/app/app
+      - scan_uploads:/app/temp
+      - ./backend/logs:/app/logs
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_started
+    command: celery -A app.tasks.worker worker --loglevel=info
+    networks:
+      - medscan_net
+
+  blockchain:
+    build: ./blockchain
+    container_name: medscan-ai-blockchain
+    restart: always
+    ports:
+      - "8545:8545"
+    volumes:
+      - blockchain_data:/blockchain_data
+    networks:
+      - medscan_net
+
+networks:
+  medscan_net:
+    driver: bridge
+
+volumes:
+  postgres_data:
+  scan_uploads:
+  blockchain_data:

@@ -1,0 +1,11 @@
+{
+    "name": "medscan-blockchain",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "devDependencies": {
+        "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+        "ganache": "^7.9.2",
+        "hardhat": "^2.28.0"
+    }
+}

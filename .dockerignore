@@ -1,0 +1,13 @@
+**/node_modules
+**/venv
+**/.venv
+**/__pycache__
+**/.git
+**/.next
+**/dist
+**/build
+**/.DS_Store
+**/artifacts
+**/cache
+mobile/android
+mobile/ios

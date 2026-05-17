@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedScan-AI | Company Setup</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: #020617;
+            color: #f8fafc;
+        }
+
+        .glass-card {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .input-dark {
+            background: rgba(2, 6, 23, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .input-dark:focus {
+            border-color: #10b981;
+            box-shadow: 0 0 15px rgba(16, 185, 129, 0.1);
+            outline: none;
+        }
+
+        .cyber-grid {
+            background-image: radial-gradient(rgba(16, 185, 129, 0.05) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        [x-cloak] {
+            display: none !important;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen cyber-grid relative overflow-x-hidden pb-12" x-data="mfgOnboarding()" x-cloak>
+
+    <!-- Decorative background elements -->
+    <div class="fixed top-0 left-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-[100px] -z-10"></div>
+    <div class="fixed bottom-0 right-1/4 w-96 h-96 bg-sky-500/10 rounded-full blur-[100px] -z-10"></div>
+
+    <!-- Top Navigation -->
+    <nav class="w-full glass-card border-b border-t-0 border-l-0 border-r-0 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <a href="home.html" class="flex items-center gap-2 group hover:opacity-80 transition-opacity">
+                    <svg class="w-6 h-6 text-emerald-400 group-hover:-translate-x-1 transition-transform" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                    </svg>
+                    <span class="font-bold tracking-wider text-sm uppercase text-slate-300">MedScan Hub</span>
+                </a>
+            </div>
+            <div class="flex items-center gap-6 text-sm font-semibold tracking-wide text-slate-400">
+                <a href="setup.html" class="text-emerald-400 border-b-2 border-emerald-400 py-2">Identity</a>
+                <a href="index.html" class="hover:text-white">Record</a>
+                <a href="analytics.html" class="hover:text-white">Forensic</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto mt-6 px-6">
+        <header class="mb-6 text-center">
+            <div
+                class="inline-flex items-center space-x-2 bg-emerald-500/10 border border-emerald-500/20 px-4 py-1.5 rounded-full mb-4">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span class="text-emerald-400 text-[10px] font-black uppercase tracking-widest">Initialization
+                    Record</span>
+            </div>
+            <h2
+                class="text-4xl font-black bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-sky-400 mb-3 uppercase tracking-tighter">
+                Security Registry</h2>
+        </header>
+
+        <!-- View 1: Initial Registration Form -->
+        <div x-show="view === 'REGISTER'"
+            class="glass-card rounded-[2.5rem] p-8 md:p-12 shadow-2xl relative overflow-hidden animate-in fade-in zoom-in duration-500">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-emerald-500/5 rounded-bl-full -z-10"></div>
+            <div class="space-y-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <label
+                            class="block text-[10px] font-black text-slate-500 uppercase tracking-widest mb-4">Company
+                            Name</label>
+                        <input type="text" x-model="name" placeholder="E.G. CIPLA LTD"
+                            class="w-full input-dark rounded-2xl px-6 py-5 text-white font-black text-emerald-400 uppercase tracking-tight">
+                    </div>
+                    <div>
+                        <label
+                            class="block text-[10px] font-black text-slate-500 uppercase tracking-widest mb-4">Security
+                            Email</label>
+                        <input type="email" x-model="email" placeholder="security@cipla.com"
+                            class="w-full input-dark rounded-2xl px-6 py-5 text-white font-medium">
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <label
+                            class="block text-[10px] font-black text-slate-500 uppercase tracking-widest mb-4">Authority
+                            Name</label>
+                        <input type="text" x-model="contact" placeholder="Compliance Officer"
+                            class="w-full input-dark rounded-2xl px-6 py-5 text-white font-bold">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-black text-slate-500 uppercase tracking-widest mb-4">Node
+                            Wallet (0x...)</label>
+                        <input type="text" x-model="wallet" placeholder="0x..."
+                            class="w-full input-dark rounded-2xl px-6 py-5 text-white font-mono text-sm">
+                    </div>
+                </div>
+                <button @click="submitRegistry()"
+                    class="w-full h-16 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black text-sm uppercase tracking-widest rounded-2xl transition-all shadow-xl shadow-emerald-500/20 flex items-center justify-center">
+                    <span x-show="!loading">Initialize Identity</span>
+                    <span x-show="loading" class="animate-spin rounded-full h-6 w-6 border-t-2 border-slate-950"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- View 2: Email Verification (NEW) -->
+        <div x-show="view === 'VERIFY_EMAIL'"
+            class="glass-card rounded-[2.5rem] p-12 shadow-2xl relative overflow-hidden text-center animate-in fade-in zoom-in duration-500">
+            <div
+                class="w-20 h-20 bg-emerald-500/20 rounded-3xl flex items-center justify-center mx-auto mb-8 border border-emerald-500/30">
+                <svg class="w-10 h-10 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                    </path>
+                </svg>
+            </div>
+            <h3 class="text-3xl font-black text-white mb-4 uppercase tracking-tighter">Identity Confirmation</h3>
+            <p class="text-slate-400 mb-8 max-w-sm mx-auto font-light">Enter the 6-digit verification record sent to
+                <span class="text-emerald-400 font-bold" x-text="email"></span>.</p>
+
+            <div class="max-w-xs mx-auto space-y-6">
+                <input type="text" x-model="vCode" placeholder="000000" maxlength="6"
+                    class="w-full input-dark rounded-2xl px-6 py-5 text-center text-3xl font-black tracking-[0.5em] text-emerald-400">
+                <button @click="verifyEmail()"
+                    class="w-full h-16 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black text-sm uppercase tracking-widest rounded-2xl transition-all">
+                    Verify Record
+                </button>
+                <button @click="view = 'REGISTER'"
+                    class="text-[10px] text-slate-500 uppercase font-black hover:text-white transition-colors">Wrong
+                    Email? Edit Registration</button>
+            </div>
+        </div>
+
+        <!-- View 3: Profile & Global Status -->
+        <div x-show="view === 'PROFILE'"
+            class="glass-card rounded-[2.5rem] p-10 shadow-2xl relative overflow-hidden animate-in fade-in zoom-in duration-500">
+            <div class="absolute top-0 right-0 w-80 h-80 bg-emerald-500/5 rounded-bl-full -z-10"></div>
+            <div class="flex flex-col md:flex-row gap-10 items-center md:items-start">
+                <div
+                    class="w-24 h-24 rounded-3xl bg-gradient-to-br from-emerald-500 to-sky-500 flex items-center justify-center shadow-2xl shadow-emerald-500/20">
+                    <span class="text-4xl font-black text-white" x-text="name ? name.charAt(0) : 'E'"></span>
+                </div>
+                <div class="flex-1">
+                    <h3 class="text-3xl font-black text-white mb-2 uppercase tracking-tight" x-text="name"></h3>
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest border mb-6"
+                        :class="{
+                             'bg-emerald-500/10 text-emerald-500 border-emerald-500/20': status === 'APPROVED',
+                             'bg-amber-500/10 text-amber-500 border-amber-500/20': status === 'PENDING',
+                             'bg-rose-500/10 text-rose-500 border-rose-500/20': status === 'UNVERIFIED'
+                         }">
+                        <span class="w-1.5 h-1.5 rounded-full animate-pulse"
+                            :class="status === 'APPROVED' ? 'bg-emerald-500' : 'bg-amber-500'"></span>
+                        <span x-text="status || 'SYNCING...'"></span>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6 border-t border-white/5">
+                        <div class="bg-white/5 p-4 rounded-2xl border border-white/5">
+                            <p class="text-[10px] font-black text-slate-500 uppercase mb-1">Alert Destination</p>
+                            <p class="text-sm font-medium text-slate-200" x-text="email"></p>
+                        </div>
+                        <div class="bg-white/5 p-4 rounded-2xl border border-white/5">
+                            <p class="text-[10px] font-black text-slate-500 uppercase mb-1">Blockchain Hash</p>
+                            <p class="text-[10px] font-mono text-slate-400 break-all"
+                                x-text="wallet || 'NOT_INITIALIZED'"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-10 flex flex-col md:flex-row gap-4 justify-center">
+                <template x-if="status === 'APPROVED'">
+                    <a href="index.html"
+                        class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black text-xs uppercase tracking-widest px-8 py-4 rounded-2xl transition-all shadow-xl shadow-emerald-500/10">Access
+                        Batch Record</a>
+                </template>
+                <button @click="view = 'REGISTER'"
+                    class="glass-card px-8 py-4 rounded-2xl text-xs font-black uppercase tracking-widest text-slate-300 hover:bg-white/5">Edit
+                    Identity Profile</button>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        function mfgOnboarding() {
+            return {
+                view: 'REGISTER',
+                name: '', email: '', contact: '', wallet: '', vCode: '',
+                status: '', loading: false, savedCompany: localStorage.getItem('medscan_company'),
+
+                async init() {
+                    if (this.savedCompany) {
+                        this.name = this.savedCompany;
+                        await this.fetchStatus();
+                    }
+                },
+                async fetchStatus() {
+                    try {
+                        const res = await fetch(`http://127.0.0.1:8000/api/v1/manufacturer/status/${encodeURIComponent(this.name)}`);
+                        if (res.ok) {
+                            const data = await res.json();
+                            this.status = data.status;
+                            if (this.status === 'UNVERIFIED') {
+                                this.view = 'VERIFY_EMAIL';
+                            } else {
+                                this.view = 'PROFILE';
+                                // Fetch extra profile details
+                                const profRes = await fetch(`http://127.0.0.1:8000/api/v1/manufacturer/profile/${encodeURIComponent(this.name)}`);
+                                if (profRes.ok) {
+                                    const prof = await profRes.json();
+                                    this.email = prof.security_email;
+                                    this.wallet = prof.blockchain_address;
+                                }
+                            }
+                        }
+                    } catch (e) { }
+                },
+                async submitRegistry() {
+                    if (!this.name || !this.email) { alert("Mandatory fields missing!"); return; }
+                    this.loading = true;
+                    try {
+                        const res = await fetch('http://127.0.0.1:8000/api/v1/manufacturer/register', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ name: this.name, security_email: this.email, contact_person: this.contact, blockchain_address: this.wallet })
+                        });
+                        const data = await res.json();
+                        if (res.ok) {
+                            localStorage.setItem('medscan_company', this.name.trim().toUpperCase());
+                            this.view = 'VERIFY_EMAIL';
+                        } else { alert(data.detail || "Registration failed"); }
+                    } finally { this.loading = false; }
+                },
+                async verifyEmail() {
+                    if (this.vCode.length !== 6) { alert("Invalid 6-digit code!"); return; }
+                    try {
+                        const res = await fetch('http://127.0.0.1:8000/api/v1/manufacturer/verify/email', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ name: this.name, code: this.vCode })
+                        });
+                        if (res.ok) {
+                            alert("Identity Verified! Waiting for Admin authorization.");
+                            await this.fetchStatus();
+                        } else {
+                            const err = await res.json();
+                            alert(err.detail || "Verification failed");
+                        }
+                    } catch (e) { alert("Connection Error"); }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

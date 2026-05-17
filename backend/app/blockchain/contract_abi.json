@@ -1,0 +1,98 @@
+[
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "batchId",
+        "type": "string"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "by",
+        "type": "address"
+      }
+    ],
+    "name": "BatchRegistered",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "_batchId",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_medicineName",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_manufacturer",
+        "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_mfgDate",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_expDate",
+        "type": "uint256"
+      },
+      {
+        "internalType": "string",
+        "name": "_region",
+        "type": "string"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "_batchHash",
+        "type": "bytes32"
+      }
+    ],
+    "name": "registerBatch",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "_batchId",
+        "type": "string"
+      }
+    ],
+    "name": "verifyBatch",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]

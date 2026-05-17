@@ -1,0 +1,962 @@
+{
+    "PFIZ-LIP88": {
+        "name": "LIPITOR (ATORVASTATIN CALCIUM TABLETS)",
+        "manufacturer": "PFIZER INC.",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1798655400,
+        "expiry_date": "2026-12-31",
+        "region": "UNITED STATES"
+    },
+    "PFIZ-LYR99": {
+        "name": "LYRICA (PREGABALIN CAPSULES)",
+        "manufacturer": "PFIZER INC.",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1809023400,
+        "expiry_date": "2027-04-30",
+        "region": "EUROPEAN UNION"
+    },
+    "AMGN-ENB22": {
+        "name": "ENBREL (ETANERCEPT INJECTION)",
+        "manufacturer": "AMGEN INC.",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1793385000,
+        "expiry_date": "2026-10-31",
+        "region": "NORTH AMERICA"
+    },
+    "AMGN-NEU33": {
+        "name": "NEULASTA (PEGFILGRASTIM INJECTION)",
+        "manufacturer": "AMGEN INC.",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1803753000,
+        "expiry_date": "2027-02-28",
+        "region": "LATIN AMERICA"
+    },
+    "GILD-REM11": {
+        "name": "VEKLURY (REMDESIVIR INJECTION)",
+        "manufacturer": "GILEAD SCIENCES INC.",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1790706600,
+        "expiry_date": "2026-09-30",
+        "region": "EAST ASIA"
+    },
+    "GILD-TRU22": {
+        "name": "TRUVADA (EMTRICTABINE TABLETS)",
+        "manufacturer": "GILEAD SCIENCES INC.",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1811701800,
+        "expiry_date": "2027-05-31",
+        "region": "SOUTH ASIA"
+    },
+    "MRNA-SPI99": {
+        "name": "SPIKEVAX (COVID-19 VACCINE mRNA)",
+        "manufacturer": "MODERNA INC.",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1788114600,
+        "expiry_date": "2026-08-31",
+        "region": "WESTERN ASIA"
+    },
+    "MRNA-BST11": {
+        "name": "MODERNA COVID-19 BOOSTER SHOT",
+        "manufacturer": "MODERNA INC.",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1801333800,
+        "expiry_date": "2027-01-31",
+        "region": "NORTH AMERICA"
+    },
+    "BIIB-TEC88": {
+        "name": "TECFIDERA (DIMETHYL FUMARATE CAPSULES)",
+        "manufacturer": "BIOGEN INC.",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1801333800,
+        "expiry_date": "2027-01-31",
+        "region": "EUROPE"
+    },
+    "BIIB-AVO22": {
+        "name": "AVONEX (INTERFERON BETA-1A INJECTION)",
+        "manufacturer": "BIOGEN INC.",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1814293800,
+        "expiry_date": "2027-06-30",
+        "region": "EAST ASIA"
+    },
+    "REGN-DUP77": {
+        "name": "DUPIXENT (DUPILUMAB INJECTION)",
+        "manufacturer": "REGENERON PHARMACEUTICALS",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1806431400,
+        "expiry_date": "2027-03-31",
+        "region": "LATIN AMERICA"
+    },
+    "REGN-EYL88": {
+        "name": "EYLEA (AFLIBERCEPT INJECTION)",
+        "manufacturer": "REGENERON PHARMACEUTICALS",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1795977000,
+        "expiry_date": "2026-11-30",
+        "region": "MIDDLE EAST"
+    },
+    "VRTX-TRI66": {
+        "name": "TRIKAFTA (ELEXACAFTOR + TEZACAFTOR)",
+        "manufacturer": "VERTEX PHARMACEUTICALS",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1811701800,
+        "expiry_date": "2027-05-31",
+        "region": "UNITED STATES"
+    },
+    "VRTX-ORK77": {
+        "name": "ORKAMBI (LUMACAFTOR + IVACAFTOR)",
+        "manufacturer": "VERTEX PHARMACEUTICALS",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1819650600,
+        "expiry_date": "2027-08-31",
+        "region": "EUROPEAN UNION"
+    },
+    "VTRS-VIA55": {
+        "name": "VIAGRA (SILDENAFIL CITRATE TABLETS)",
+        "manufacturer": "VIATRIS INC.",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1795977000,
+        "expiry_date": "2026-11-30",
+        "region": "SOUTH ASIA"
+    },
+    "VTRS-EPI66": {
+        "name": "EPIPEN (EPINEPHRINE INJECTION)",
+        "manufacturer": "VIATRIS INC.",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1806431400,
+        "expiry_date": "2027-03-31",
+        "region": "NORTH AMERICA"
+    },
+    "ALXN-SOL44": {
+        "name": "SOLIRIS (ECULIZUMAB INJECTION)",
+        "manufacturer": "ALEXION PHARMACEUTICALS",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1785436200,
+        "expiry_date": "2026-07-31",
+        "region": "WESTERN ASIA"
+    },
+    "ALXN-ULT55": {
+        "name": "ULTOMIRIS (RAVULIZUMAB INJECTION)",
+        "manufacturer": "ALEXION PHARMACEUTICALS",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1822242600,
+        "expiry_date": "2027-09-30",
+        "region": "EUROPE"
+    },
+    "INCY-JAK33": {
+        "name": "JAKAFI (RUXOLITINIB TABLETS)",
+        "manufacturer": "INCYTE CORPORATION",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1803753000,
+        "expiry_date": "2027-02-28",
+        "region": "EAST ASIA"
+    },
+    "INCY-OPZ44": {
+        "name": "OPZELURA (RUXOLITINIB CREAM)",
+        "manufacturer": "INCYTE CORPORATION",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1824921000,
+        "expiry_date": "2027-10-31",
+        "region": "LATIN AMERICA"
+    },
+    "BMRN-ALD22": {
+        "name": "ALDURZYME (LARONIDASE INJECTION)",
+        "manufacturer": "BIOMARIN PHARMACEUTICAL",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1782757800,
+        "expiry_date": "2026-06-30",
+        "region": "MIDDLE EAST"
+    },
+    "BMRN-VOX33": {
+        "name": "VOXZOGO (VOSORITIDE FOR INJECTION)",
+        "manufacturer": "BIOMARIN PHARMACEUTICAL",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1827513000,
+        "expiry_date": "2027-11-30",
+        "region": "UNITED STATES"
+    },
+    "SGEN-ADC11": {
+        "name": "ADCETRIS (BRENTUXIMAB VEDOTIN)",
+        "manufacturer": "SEAGEN INC.",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1790706600,
+        "expiry_date": "2026-09-30",
+        "region": "EUROPEAN UNION"
+    },
+    "SGEN-PAD22": {
+        "name": "PADCEV (ENFORTUMAB VEDOTIN FOR INJECTION)",
+        "manufacturer": "SEAGEN INC.",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1811701800,
+        "expiry_date": "2027-05-31",
+        "region": "EAST ASIA"
+    },
+    "ORGAN-NEX99": {
+        "name": "NEXPLANON (ETONOGESTREL IMPLANT)",
+        "manufacturer": "ORGANON & CO.",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1809023400,
+        "expiry_date": "2027-04-30",
+        "region": "LATIN AMERICA"
+    },
+    "ORGAN-NUV11": {
+        "name": "NUVARING (ETONOGESTREL DIARY)",
+        "manufacturer": "ORGANON & CO.",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1830191400,
+        "expiry_date": "2027-12-31",
+        "region": "SOUTH ASIA"
+    },
+    "JAZZ-XYR88": {
+        "name": "XYREM (SODIUM OXYBATE ORAL SOLUTION)",
+        "manufacturer": "JAZZ PHARMACEUTICALS",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1814293800,
+        "expiry_date": "2027-06-30",
+        "region": "MIDDLE EAST"
+    },
+    "JAZZ-EPI99": {
+        "name": "EPIDIOLEX (CANNABIDIOL ORAL SOLUTION)",
+        "manufacturer": "JAZZ PHARMACEUTICALS",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1819650600,
+        "expiry_date": "2027-08-31",
+        "region": "NORTH AMERICA"
+    },
+    "HRZN-TEP77": {
+        "name": "TEPEZZA (TEPROTUMUMAB INJECTION)",
+        "manufacturer": "HORIZON THERAPEUTICS",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1793385000,
+        "expiry_date": "2026-10-31",
+        "region": "WESTERN ASIA"
+    },
+    "HRZN-KRY88": {
+        "name": "KRYSTEXXA (PEGLOTICASE INJECTION)",
+        "manufacturer": "HORIZON THERAPEUTICS",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1816972200,
+        "expiry_date": "2027-07-31",
+        "region": "EUROPE"
+    },
+    "JNJ-TYL77": {
+        "name": "TYLENOL (ACETAMINOPHEN TABLETS)",
+        "manufacturer": "JOHNSON & JOHNSON",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1811701800,
+        "expiry_date": "2027-05-31",
+        "region": "UNITED STATES"
+    },
+    "JNJ-REM88": {
+        "name": "REMICADE (INFLIXIMAB INJECTION)",
+        "manufacturer": "JOHNSON & JOHNSON",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1822242600,
+        "expiry_date": "2027-09-30",
+        "region": "EUROPEAN UNION"
+    },
+    "MERK-KEY66": {
+        "name": "KEYTRUDA (PEMBROLIZUMAB INJECTION)",
+        "manufacturer": "MERCK & CO. INC.",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1809023400,
+        "expiry_date": "2027-04-30",
+        "region": "EAST ASIA"
+    },
+    "MERK-SIN77": {
+        "name": "SINGULAIR (MONTELUKAST SODIUM)",
+        "manufacturer": "MERCK & CO. INC.",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1824921000,
+        "expiry_date": "2027-10-31",
+        "region": "SOUTH ASIA"
+    },
+    "ABBV-HUM55": {
+        "name": "HUMIRA (ADALIMUMAB INJECTION)",
+        "manufacturer": "ABBVIE INC.",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1798655400,
+        "expiry_date": "2026-12-31",
+        "region": "LATIN AMERICA"
+    },
+    "ABBV-IMB66": {
+        "name": "IMBRUVICA (IBRUTINIB CAPSULES)",
+        "manufacturer": "ABBVIE INC.",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1827513000,
+        "expiry_date": "2027-11-30",
+        "region": "MIDDLE EAST"
+    },
+    "BMS-ELI44": {
+        "name": "ELIQUIS (APIXABAN TABLETS)",
+        "manufacturer": "BRISTOL MYERS SQUIBB",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1795977000,
+        "expiry_date": "2026-11-30",
+        "region": "NORTH AMERICA"
+    },
+    "BMS-OPD55": {
+        "name": "OPDIVO (NIVOLUMAB INJECTION)",
+        "manufacturer": "BRISTOL MYERS SQUIBB",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1830191400,
+        "expiry_date": "2027-12-31",
+        "region": "WESTERN ASIA"
+    },
+    "LILLY-PRO33": {
+        "name": "PROZAC (FLUOXETINE CAPSULES)",
+        "manufacturer": "ELI LILLY AND COMPANY",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1806431400,
+        "expiry_date": "2027-03-31",
+        "region": "EUROPE"
+    },
+    "LILLY-HUM44": {
+        "name": "HUMALOG (INSULIN LISPRO INJECTION)",
+        "manufacturer": "ELI LILLY AND COMPANY",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1822242600,
+        "expiry_date": "2027-09-30",
+        "region": "EAST ASIA"
+    },
+    "BAX-DIA11": {
+        "name": "DIANEAL (PERITONEAL DIALYSIS SOLUTION)",
+        "manufacturer": "BAXTER INTERNATIONAL INC.",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1788114600,
+        "expiry_date": "2026-08-31",
+        "region": "UNITED STATES"
+    },
+    "BAX-FLE22": {
+        "name": "FLEXBUMIN (HUMAN ALBUMIN INJECTION)",
+        "manufacturer": "BAXTER INTERNATIONAL INC.",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1814293800,
+        "expiry_date": "2027-06-30",
+        "region": "EUROPEAN UNION"
+    },
+    "ALK-VIV33": {
+        "name": "VIVITROL (NALTREXONE EXTENDED RELEASE)",
+        "manufacturer": "ALKERMES PLC",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1806431400,
+        "expiry_date": "2027-03-31",
+        "region": "NORTH AMERICA"
+    },
+    "ALK-ARI44": {
+        "name": "ARISTADA (ARIPIPRAZOLE LAUROXIL)",
+        "manufacturer": "ALKERMES PLC",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1822242600,
+        "expiry_date": "2027-09-30",
+        "region": "EAST ASIA"
+    },
+    "MYL-ATO55": {
+        "name": "MYLAN-ATORVASTATIN (CHOLESTEROL TABLETS)",
+        "manufacturer": "MYLAN PHARMACEUTICALS",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1795977000,
+        "expiry_date": "2026-11-30",
+        "region": "LATIN AMERICA"
+    },
+    "MYL-AML66": {
+        "name": "MYLAN-AMLODIPINE (HYPERTENSION TABLETS)",
+        "manufacturer": "MYLAN PHARMACEUTICALS",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1819650600,
+        "expiry_date": "2027-08-31",
+        "region": "SOUTH ASIA"
+    },
+    "SAN-LAN77": {
+        "name": "LANTUS (INSULIN GLARGINE INJECTION)",
+        "manufacturer": "SANOFI US SERVICES",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1793385000,
+        "expiry_date": "2026-10-31",
+        "region": "EUROPE"
+    },
+    "SAN-TOU88": {
+        "name": "TOUJEO (INSULIN GLARGINE U-300)",
+        "manufacturer": "SANOFI US SERVICES",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1811701800,
+        "expiry_date": "2027-05-31",
+        "region": "NORTH AMERICA"
+    },
+    "GSK-ADV99": {
+        "name": "ADVAIR DISKUS (FLUTICASONE + SALMETEROL)",
+        "manufacturer": "GLAXOSMITHKLINE US",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1803753000,
+        "expiry_date": "2027-02-28",
+        "region": "UNITED STATES"
+    },
+    "GSK-VEN11": {
+        "name": "VENTOLIN HFA (ALBUTEROL INHALER)",
+        "manufacturer": "GLAXOSMITHKLINE US",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1822242600,
+        "expiry_date": "2027-09-30",
+        "region": "LATIN AMERICA"
+    },
+    "NOV-ENT22": {
+        "name": "ENTRESTO (SACUBITRIL + VALSARTAN)",
+        "manufacturer": "NOVARTIS PHARMA US",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1798655400,
+        "expiry_date": "2026-12-31",
+        "region": "EUROPEAN UNION"
+    },
+    "NOV-COS33": {
+        "name": "COSENTYX (SECUKINUMAB INJECTION)",
+        "manufacturer": "NOVARTIS PHARMA US",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1827513000,
+        "expiry_date": "2027-11-30",
+        "region": "MIDDLE EAST"
+    },
+    "MSD-GAR44": {
+        "name": "GARDASIL 9 (HPV VACCINE RECOMBINANT)",
+        "manufacturer": "MERCK SHARP & DOHME",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1809023400,
+        "expiry_date": "2027-04-30",
+        "region": "EAST ASIA"
+    },
+    "MSD-JAN55": {
+        "name": "JANUVIA (SITAGLIPTIN DIABETES TABLETS)",
+        "manufacturer": "MERCK SHARP & DOHME",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1824921000,
+        "expiry_date": "2027-10-31",
+        "region": "WESTERN ASIA"
+    },
+    "AZ-CRE66": {
+        "name": "CRESTOR (ROSUVASTATIN CALCIUM)",
+        "manufacturer": "ASTRAZENECA US",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1795977000,
+        "expiry_date": "2026-11-30",
+        "region": "UNITED STATES"
+    },
+    "AZ-SYM77": {
+        "name": "SYMBICORT (BUDESONIDE + FORMOTEROL)",
+        "manufacturer": "ASTRAZENECA US",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1819650600,
+        "expiry_date": "2027-08-31",
+        "region": "SOUTH ASIA"
+    },
+    "TAK-VYV88": {
+        "name": "VYVANSE (LISDEXAMFETAMINE CAPSULES)",
+        "manufacturer": "TAKEDA PHARMACEUTICALS US",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1806431400,
+        "expiry_date": "2027-03-31",
+        "region": "NORTH AMERICA"
+    },
+    "TAK-ENT99": {
+        "name": "ENTYVIO (VEDOLIZUMAB INJECTION)",
+        "manufacturer": "TAKEDA PHARMACEUTICALS US",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1830191400,
+        "expiry_date": "2027-12-31",
+        "region": "EUROPE"
+    },
+    "BI-JAR11": {
+        "name": "JARDIANCE (EMPAGLIFLOZIN TABLETS)",
+        "manufacturer": "BOEHRINGER INGELHEIM US",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1793385000,
+        "expiry_date": "2026-10-31",
+        "region": "LATIN AMERICA"
+    },
+    "BI-SPI22": {
+        "name": "SPIRIVA HANDIHALER (TIOTROPIUM)",
+        "manufacturer": "BOEHRINGER INGELHEIM US",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1822242600,
+        "expiry_date": "2027-09-30",
+        "region": "EAST ASIA"
+    },
+    "GSD0144A": {
+        "name": "ROSUVAS 10 (ROSUVASTATIN CALCIUM 10MG TABLETS)",
+        "manufacturer": "SUN PHARMACEUTICAL INDUSTRIES LTD.",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1798655400,
+        "expiry_date": "2026-12-31",
+        "region": "DOMESTIC"
+    },
+    "GSD0155B": {
+        "name": "VOLINI (DICLOFENAC PAIN RELIEF GEL)",
+        "manufacturer": "SUN PHARMACEUTICAL INDUSTRIES LTD.",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1811701800,
+        "expiry_date": "2027-05-31",
+        "region": "SOUTH ASIA"
+    },
+    "BTD9045B": {
+        "name": "OMEZ 20 (OMEPRAZOLE 20MG CAPSULES)",
+        "manufacturer": "DR. REDDYS LABORATORIES LTD.",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1795977000,
+        "expiry_date": "2026-11-30",
+        "region": "DOMESTIC"
+    },
+    "BTD9056C": {
+        "name": "NISE (NIMESULIDE ACUTE PAIN TABLETS)",
+        "manufacturer": "DR. REDDYS LABORATORIES LTD.",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1814293800,
+        "expiry_date": "2027-06-30",
+        "region": "LATIN AMERICA"
+    },
+    "LJD8834C": {
+        "name": "GLUCONORM-G1 FORTE (GLIMEPIRIDE 1MG + METFORMIN 1000MG)",
+        "manufacturer": "LUPIN LIMITED",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1801333800,
+        "expiry_date": "2027-01-31",
+        "region": "DOMESTIC"
+    },
+    "LJD8845D": {
+        "name": "LUPISULIN (HUMAN INSULIN SUSPENSION)",
+        "manufacturer": "LUPIN LIMITED",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1819650600,
+        "expiry_date": "2027-08-31",
+        "region": "MIDDLE EAST"
+    },
+    "MKD7721D": {
+        "name": "NUROKIND-LC (METHYLCOBALAMIN + L-CARNITINE TABLETS)",
+        "manufacturer": "MANKIND PHARMA LTD.",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1793385000,
+        "expiry_date": "2026-10-31",
+        "region": "DOMESTIC"
+    },
+    "MKD7732E": {
+        "name": "MANFORCE (SILDENAFIL CITRATE TABLETS)",
+        "manufacturer": "MANKIND PHARMA LTD.",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1822242600,
+        "expiry_date": "2027-09-30",
+        "region": "SOUTH ASIA"
+    },
+    "PFD6612E": {
+        "name": "BECOSULES CAPSULES (VITAMIN B-COMPLEX + VITAMIN C)",
+        "manufacturer": "PFIZER LIMITED",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1811701800,
+        "expiry_date": "2027-05-31",
+        "region": "DOMESTIC"
+    },
+    "PFD6623F": {
+        "name": "COREX (COUGH SYRUP FORMULATION)",
+        "manufacturer": "PFIZER LIMITED",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1824921000,
+        "expiry_date": "2027-10-31",
+        "region": "WESTERN ASIA"
+    },
+    "GF244009": {
+        "name": "RUBIRED Z",
+        "manufacturer": "MACLEODS PHARMACEUTICALS LTD.",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1782757800,
+        "expiry_date": "2026-06-30",
+        "region": "DOMESTIC"
+    },
+    "GF244010": {
+        "name": "MACFOLATE (FOLIC ACID SUPPLEMENT)",
+        "manufacturer": "MACLEODS PHARMACEUTICALS LTD.",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1827513000,
+        "expiry_date": "2027-11-30",
+        "region": "EAST ASIA"
+    },
+    "INC2570": {
+        "name": "MEGAFERON",
+        "manufacturer": "ARISTO PHARMACEUTICALS",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1796063400,
+        "expiry_date": "2026-12-01",
+        "region": "DOMESTIC"
+    },
+    "INC2581": {
+        "name": "ARISTOFOL (PREMIUM MULTIVITAMIN)",
+        "manufacturer": "ARISTO PHARMACEUTICALS",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1830191400,
+        "expiry_date": "2027-12-31",
+        "region": "EUROPE"
+    },
+    "REX9900": {
+        "name": "REXCOF DX COUGH SYRUP",
+        "manufacturer": "CIPLA LIMITED",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1793385000,
+        "expiry_date": "2026-10-31",
+        "region": "DOMESTIC"
+    },
+    "REX9911": {
+        "name": "CIPLOX (CIPROFLOXACIN TABLETS)",
+        "manufacturer": "CIPLA LIMITED",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1811701800,
+        "expiry_date": "2027-05-31",
+        "region": "EUROPEAN UNION"
+    },
+    "TOR5566A": {
+        "name": "CHYMORAL FORTE (TRYPSIN-CHYMOTRYPSIN TABLETS)",
+        "manufacturer": "TORRENT PHARMACEUTICALS LTD.",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1793385000,
+        "expiry_date": "2026-10-31",
+        "region": "DOMESTIC"
+    },
+    "TOR5577B": {
+        "name": "AZULIX (GLIMEPIRIDE TABLETS)",
+        "manufacturer": "TORRENT PHARMACEUTICALS LTD.",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1816972200,
+        "expiry_date": "2027-07-31",
+        "region": "NORTH AMERICA"
+    },
+    "GLN4433B": {
+        "name": "ASCORIL LS SYRUP (AMBROXOL + LEVOSALBUTAMOL)",
+        "manufacturer": "GLENMARK PHARMACEUTICALS LTD.",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1790706600,
+        "expiry_date": "2026-09-30",
+        "region": "DOMESTIC"
+    },
+    "GLN4444C": {
+        "name": "TELMA 40 (TELMISARTAN HYPERTENSION TABLETS)",
+        "manufacturer": "GLENMARK PHARMACEUTICALS LTD.",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1819650600,
+        "expiry_date": "2027-08-31",
+        "region": "EAST ASIA"
+    },
+    "ALK1122C": {
+        "name": "CLAVAM 625 (AMOXICILLIN + POTASSIUM CLAVULANATE)",
+        "manufacturer": "ALKEM LABORATORIES LTD.",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1798655400,
+        "expiry_date": "2026-12-31",
+        "region": "DOMESTIC"
+    },
+    "ALK1133D": {
+        "name": "PAN-D (PANTOPRAZOLE + DOMPERIDONE)",
+        "manufacturer": "ALKEM LABORATORIES LTD.",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1822242600,
+        "expiry_date": "2027-09-30",
+        "region": "LATIN AMERICA"
+    },
+    "ZYD9988D": {
+        "name": "LIPAGLYN (SAROGLITAZAR TABLETS)",
+        "manufacturer": "ZYDUS LIFESCIENCES LTD.",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1803753000,
+        "expiry_date": "2027-02-28",
+        "region": "DOMESTIC"
+    },
+    "ZYD9999E": {
+        "name": "ZYCLAV (AMOXICILLIN FOR SUSPENSION)",
+        "manufacturer": "ZYDUS LIFESCIENCES LTD.",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1824921000,
+        "expiry_date": "2027-10-31",
+        "region": "MIDDLE EAST"
+    },
+    "BIO7766E": {
+        "name": "INSUGEN (HUMAN INSULIN INJECTION)",
+        "manufacturer": "BIOCON LIMITED",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1788114600,
+        "expiry_date": "2026-08-31",
+        "region": "DOMESTIC"
+    },
+    "BIO7777F": {
+        "name": "CANMAB (TRASTUZUMAB TARGETED INJECTION)",
+        "manufacturer": "BIOCON LIMITED",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1827513000,
+        "expiry_date": "2027-11-30",
+        "region": "UNITED STATES"
+    },
+    "INT5544F": {
+        "name": "LIPICARD 160 (FENOFIBRATE TABLETS)",
+        "manufacturer": "INTAS PHARMACEUTICALS LTD.",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1795977000,
+        "expiry_date": "2026-11-30",
+        "region": "DOMESTIC"
+    },
+    "INT5555G": {
+        "name": "INTACEF (CEFTRIAXONE ANTIBIOTIC INJECTION)",
+        "manufacturer": "INTAS PHARMACEUTICALS LTD.",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1830191400,
+        "expiry_date": "2027-12-31",
+        "region": "EUROPE"
+    },
+    "AUR3322G": {
+        "name": "AMLOSAFE 5 (AMLODIPINE TABLETS)",
+        "manufacturer": "AUROBINDO PHARMA LTD.",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1801333800,
+        "expiry_date": "2027-01-31",
+        "region": "DOMESTIC"
+    },
+    "AUR3333H": {
+        "name": "AURO-AZITHROMYCIN (ANTIBIOTIC TABLETS)",
+        "manufacturer": "AUROBINDO PHARMA LTD.",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1811701800,
+        "expiry_date": "2027-05-31",
+        "region": "EUROPEAN UNION"
+    },
+    "IPC1199H": {
+        "name": "LARIAGO 250 (CHLOROQUINE PHOSPHATE TABLETS)",
+        "manufacturer": "IPCA LABORATORIES LTD.",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1785436200,
+        "expiry_date": "2026-07-31",
+        "region": "DOMESTIC"
+    },
+    "IPC1188I": {
+        "name": "ZERO-DOL SP (ACECLOFENAC COMBINATION)",
+        "manufacturer": "IPCA LABORATORIES LTD.",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1814293800,
+        "expiry_date": "2027-06-30",
+        "region": "LATIN AMERICA"
+    },
+    "ALM8877I": {
+        "name": "AZITHRAL 500 (AZITHROMYCIN TABLETS)",
+        "manufacturer": "ALEMBIC PHARMACEUTICALS LTD.",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1798655400,
+        "expiry_date": "2026-12-31",
+        "region": "DOMESTIC"
+    },
+    "ALM8888J": {
+        "name": "ALERID (CETIRIZINE ALLERGY TABLETS)",
+        "manufacturer": "ALEMBIC PHARMACEUTICALS LTD.",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1819650600,
+        "expiry_date": "2027-08-31",
+        "region": "MIDDLE EAST"
+    },
+    "ABB6655J": {
+        "name": "THYRONORM (LEVOTHYROXINE SODIUM TABLETS)",
+        "manufacturer": "ABBOTT INDIA LIMITED",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1809023400,
+        "expiry_date": "2027-04-30",
+        "region": "DOMESTIC"
+    },
+    "ABB6666K": {
+        "name": "DUPHASTON (DYDROGESTERONE TABLETS)",
+        "manufacturer": "ABBOTT INDIA LIMITED",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1822242600,
+        "expiry_date": "2027-09-30",
+        "region": "SOUTH ASIA"
+    },
+    "GSK4433K": {
+        "name": "AUGMENTIN 625 DUO (AMOXICILLIN + CLAVULANATE)",
+        "manufacturer": "GLAXOSMITHKLINE PHARMACEUTICALS",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1793385000,
+        "expiry_date": "2026-10-31",
+        "region": "DOMESTIC"
+    },
+    "GSK4444L": {
+        "name": "CALPOL 500 (PARACETAMOL HEADACHE TABLETS)",
+        "manufacturer": "GLAXOSMITHKLINE PHARMACEUTICALS",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1824921000,
+        "expiry_date": "2027-10-31",
+        "region": "UNITED STATES"
+    },
+    "NOV2211L": {
+        "name": "VOVERAN SR 100 (DICLOFENAC SODIUM)",
+        "manufacturer": "NOVARTIS INDIA LIMITED",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1806431400,
+        "expiry_date": "2027-03-31",
+        "region": "DOMESTIC"
+    },
+    "NOV2222M": {
+        "name": "GALVUS MET (VILDAGLIPTIN + METFORMIN)",
+        "manufacturer": "NOVARTIS INDIA LIMITED",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1827513000,
+        "expiry_date": "2027-11-30",
+        "region": "EUROPE"
+    },
+    "MIC-DOL11": {
+        "name": "DOLO 650 (PARACETAMOL 650MG TABLETS)",
+        "manufacturer": "MICRO LABS LIMITED",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1788114600,
+        "expiry_date": "2026-08-31",
+        "region": "DOMESTIC"
+    },
+    "MIC-CAR22": {
+        "name": "CARVIPRESS (CARVIPRESS CARVEDILOL)",
+        "manufacturer": "MICRO LABS LIMITED",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1814293800,
+        "expiry_date": "2027-06-30",
+        "region": "SOUTH ASIA"
+    },
+    "FDC-ELE33": {
+        "name": "ELECTRAL ORS (REHYDRATION SALTS)",
+        "manufacturer": "FDC LIMITED",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1806431400,
+        "expiry_date": "2027-03-31",
+        "region": "DOMESTIC"
+    },
+    "FDC-ZEF44": {
+        "name": "ZEFI (CEFIXIME ANTIMICROBIAL TABLETS)",
+        "manufacturer": "FDC LIMITED",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1822242600,
+        "expiry_date": "2027-09-30",
+        "region": "MIDDLE EAST"
+    },
+    "COR-CAL55": {
+        "name": "COROCAL (CALCIUM SUPPLEMENT)",
+        "manufacturer": "CORONATION PHARMA",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1795977000,
+        "expiry_date": "2026-11-30",
+        "region": "DOMESTIC"
+    },
+    "COR-PRI66": {
+        "name": "COROPRIL (ENALAPRIL HYPERTENSION)",
+        "manufacturer": "CORONATION PHARMA",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1819650600,
+        "expiry_date": "2027-08-31",
+        "region": "LATIN AMERICA"
+    },
+    "HET-COV77": {
+        "name": "COVIPRI (REMDESIVIR COVIPRI INJECTION)",
+        "manufacturer": "HETERO DRUGS LTD",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1793385000,
+        "expiry_date": "2026-10-31",
+        "region": "DOMESTIC"
+    },
+    "HET-LIP88": {
+        "name": "HETERO-LIP (ATORVASTATIN GENERIC)",
+        "manufacturer": "HETERO DRUGS LTD",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1811701800,
+        "expiry_date": "2027-05-31",
+        "region": "EAST ASIA"
+    },
+    "APO-MET99": {
+        "name": "APO-METFORMIN (DIABETES CONTROL CAPSULES)",
+        "manufacturer": "APOTEX RESEARCH INDIA",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1803753000,
+        "expiry_date": "2027-02-28",
+        "region": "DOMESTIC"
+    },
+    "APO-ATE11": {
+        "name": "APO-ATENOLOL (BETA BLOCKER TABLETS)",
+        "manufacturer": "APOTEX RESEARCH INDIA",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1822242600,
+        "expiry_date": "2027-09-30",
+        "region": "EUROPE"
+    },
+    "SUN-REV22": {
+        "name": "REVITAL H (DAILY ENERGY MULTIVITAMIN)",
+        "manufacturer": "SUN PHARMA LABORATORIES",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1798655400,
+        "expiry_date": "2026-12-31",
+        "region": "DOMESTIC"
+    },
+    "SUN-CHE33": {
+        "name": "CHERI SYRUP (IRON AND FOLIC ACID)",
+        "manufacturer": "SUN PHARMA LABORATORIES",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1827513000,
+        "expiry_date": "2027-11-30",
+        "region": "WESTERN ASIA"
+    },
+    "BC-TUS44": {
+        "name": "TUSQ-D (COUGH AND COLD LIQUID)",
+        "manufacturer": "BLUE CROSS LABORATORIES",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1795977000,
+        "expiry_date": "2026-11-30",
+        "region": "DOMESTIC"
+    },
+    "BC-MEF55": {
+        "name": "MEFTAL-SPAS (SPASMODIC PAIN RELIEF)",
+        "manufacturer": "BLUE CROSS LABORATORIES",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1819650600,
+        "expiry_date": "2027-08-31",
+        "region": "SOUTH ASIA"
+    },
+    "EMC-ORO66": {
+        "name": "OROFER-XT (PREMIUM IRON INJECTION)",
+        "manufacturer": "EMCURE PHARMACEUTICALS LTD.",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1806431400,
+        "expiry_date": "2027-03-31",
+        "region": "DOMESTIC"
+    },
+    "EMC-MET77": {
+        "name": "METAPRO-XL (METOPROLOL CARDIO RES)",
+        "manufacturer": "EMCURE PHARMACEUTICALS LTD.",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1830191400,
+        "expiry_date": "2027-12-31",
+        "region": "EAST ASIA"
+    },
+    "AJA-MET88": {
+        "name": "METXL (METOPROLOL ANGINA CONTROL)",
+        "manufacturer": "AJANTA PHARMA LTD.",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1806431400,
+        "expiry_date": "2027-03-31",
+        "region": "DOMESTIC"
+    },
+    "AJA-MEL99": {
+        "name": "MELACARE (SKIN REGENERATION CREAM)",
+        "manufacturer": "AJANTA PHARMA LTD.",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1830191400,
+        "expiry_date": "2027-12-31",
+        "region": "LATIN AMERICA"
+    },
+    "MKS-GAS11": {
+        "name": "GASP-O (ADVANCED ACIDITY GEL)",
+        "manufacturer": "MANKIND SPECIALTIES",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1793385000,
+        "expiry_date": "2026-10-31",
+        "region": "DOMESTIC"
+    },
+    "MKS-MER22": {
+        "name": "MERO-TROL (MERO-TROL MEROPENEM)",
+        "manufacturer": "MANKIND SPECIALTIES",
+        "mfg_ts": 1779006700,
+        "exp_ts": 1822242600,
+        "expiry_date": "2027-09-30",
+        "region": "MIDDLE EAST"
+    }
+}

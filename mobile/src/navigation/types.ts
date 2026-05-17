@@ -1,0 +1,20 @@
+export type RootStackParamList = {
+    Splash: undefined;
+    Login: undefined;
+    Signup: undefined;
+    Onboarding: undefined;
+    Emergency: undefined;
+    SafetyCenter: undefined;
+    Home: undefined;
+    Scan: undefined;
+    History: undefined;
+    Profile: undefined;
+    Cabinet: undefined;
+    Review: { images: { front: string; back?: string; composition?: string } };
+    Result: { scanId: string };
+    ReportIssue: { medicineName: string; batchId: string; scanId?: string; manufacturer?: string };
+    ForgotPassword: undefined;
+    Settings: undefined;
+    EditProfile: undefined;
+    ChangePassword: undefined;
+};

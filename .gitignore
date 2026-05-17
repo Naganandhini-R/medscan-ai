@@ -1,0 +1,74 @@
+# Dependencies
+node_modules/
+**/node_modules/
+venv/
+**/venv/
+.venv/
+env/
+
+# Environment Variables
+.env
+.env.*
+*.env
+**/.env
+**/.env.*
+
+# Build outputs
+dist/
+build/
+*.pyc
+__pycache__/
+*.so
+*.dylib
+
+# System
+.DS_Store
+**/.DS_Store
+Thumbs.db
+**/Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+logs/
+**/logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Mobile
+mobile/android/app/build/
+mobile/android/.gradle/
+mobile/android/local.properties
+mobile/ios/Pods/
+mobile/ios/build/
+mobile/ios/*.xcworkspace/xcuserdata
+mobile/.expo/
+
+# Blockchain (Hardhat)
+blockchain/artifacts/
+blockchain/cache/
+blockchain/typechain/
+blockchain/typechain-types/
+blockchain/coverage/
+blockchain/coverage.json
+
+# Backend (Database & Testing)
+*.sqlite3
+*.db
+*.db-journal
+backend/medscan.db
+backend/medscan.db-journal
+.pytest_cache/
+htmlcov/
+.coverage
+coverage.xml
+
+# Archives
+*.tar.gz
+*.rar

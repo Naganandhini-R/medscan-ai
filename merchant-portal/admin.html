@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedScan-AI | Control Plane</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: #020617;
+            color: #f8fafc;
+        }
+
+        .glass-card {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .cyber-grid {
+            background-image: radial-gradient(rgba(56, 189, 248, 0.05) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        .btn-gradient {
+            background: linear-gradient(135deg, #0ea5e9 0%, #3b82f6 100%);
+        }
+
+        .status-badge {
+            font-weight: 800;
+            font-size: 10px;
+            padding: 4px 12px;
+            border-radius: 99px;
+            letter-spacing: 0.1em;
+        }
+
+        [x-cloak] {
+            display: none !important;
+        }
+
+        /* Tactical Dashboard Styles */
+        .terminal-text {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .data-label {
+            font-size: 9px;
+            font-weight: 900;
+            color: #64748b;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .card-inner-glow {
+            box-shadow: inset 0 0 20px rgba(56, 189, 248, 0.02);
+        }
+    </style>
+</head>
+
+<body class="min-h-screen cyber-grid flex flex-col" x-data="adminSystem()" x-cloak>
+
+    <!-- Top Navigation -->
+    <nav class="w-full glass-card border-b border-t-0 border-l-0 border-r-0 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <a href="home.html" class="flex items-center gap-2 group">
+                    <div class="w-8 h-8 rounded-lg bg-sky-500/20 flex items-center justify-center">
+                        <svg class="w-4 h-4 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                        </svg>
+                    </div>
+                    <span class="font-black tracking-[0.2em] text-[10px] uppercase text-slate-400">Hub Console</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-6">
+                <div
+                    class="flex items-center gap-2 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <span class="text-[9px] font-black text-emerald-500 uppercase tracking-widest">Master Node:
+                        Online</span>
+                </div>
+                <button @click="fetchQueue()"
+                    class="flex items-center gap-2 text-slate-500 hover:text-white transition-colors">
+                    <svg class="w-4 h-4" :class="refreshing ? 'animate-spin' : ''" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15">
+                        </path>
+                    </svg>
+                    <span class="text-[10px] font-black uppercase tracking-widest">Sync</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl w-full mx-auto p-8 pt-6 flex-1">
+        <!-- Dashboard Header -->
+        <div class="mb-8 flex flex-col md:flex-row md:items-end justify-between gap-6">
+            <div>
+                <p class="text-sky-400 text-[11px] font-black uppercase tracking-[0.3em] mb-3">Enterprise Security
+                    Management</p>
+                <h1 class="text-5xl font-black text-white tracking-tighter uppercase italic">Control <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-indigo-500">Plane</span>
+                </h1>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="flex gap-4">
+                <div class="glass-card px-6 py-4 rounded-2xl min-w-[120px]">
+                    <p class="data-label mb-1">Pending</p>
+                    <p class="text-2xl font-black text-amber-500"
+                        x-text="queue.filter(i => i.status === 'PENDING').length">0</p>
+                </div>
+                <div class="glass-card px-6 py-4 rounded-2xl min-w-[120px]">
+                    <p class="data-label mb-1">Approved</p>
+                    <p class="text-2xl font-black text-emerald-500"
+                        x-text="queue.filter(i => i.status === 'APPROVED').length">0</p>
+                </div>
+                <div class="glass-card px-6 py-4 rounded-2xl min-w-[120px]">
+                    <p class="data-label mb-1">Total Registered</p>
+                    <p class="text-2xl font-black text-white" x-text="queue.length">0</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Workspace -->
+        <div class="grid grid-cols-1 xl:grid-cols-2 gap-4">
+            <template x-for="item in sortedQueue" :key="item.id">
+                <div
+                    class="glass-card rounded-3xl p-6 card-inner-glow border-white/[0.03] hover:border-sky-500/20 group relative overflow-hidden">
+                    <!-- Status Badge -->
+                    <div class="absolute top-6 right-6">
+                        <span class="status-badge" :class="{
+                                  'bg-amber-500/10 text-amber-500 border border-amber-500/20': item.status === 'PENDING',
+                                  'bg-emerald-500/10 text-emerald-500 border border-emerald-500/20': item.status === 'APPROVED',
+                                  'bg-rose-500/10 text-rose-500 border border-rose-500/20': item.status === 'REJECTED'
+                              }" x-text="item.status"></span>
+                    </div>
+
+                    <div class="flex items-start gap-4 mb-5">
+                        <div class="w-12 h-12 rounded-2xl flex items-center justify-center font-black text-xl shadow-2xl transition-transform group-hover:scale-105"
+                            :class="item.status === 'PENDING' ? 'bg-amber-500/20 text-amber-400' : 'bg-sky-500/20 text-sky-400'">
+                            <span x-text="item.name.charAt(0)"></span>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <h2 class="text-lg font-black uppercase tracking-tight truncate transition-colors"
+                                :class="{
+                                    'text-slate-200 group-hover:text-white': item.status === 'PENDING',
+                                    'text-emerald-400 group-hover:text-emerald-300': item.status === 'APPROVED',
+                                    'text-rose-400 group-hover:text-rose-300': item.status === 'REJECTED'
+                                }"
+                                x-text="item.name"></h2>
+                            <div class="flex flex-col mt-1">
+                                <div class="flex items-center gap-3">
+                                    <span class="text-[10px] font-bold text-slate-500 uppercase tracking-widest"
+                                        x-text="item.contact_person || 'SEC_AUTHORITY'"></span>
+                                    <span class="w-1 h-1 rounded-full bg-slate-700"></span>
+                                    <span class="text-[10px] font-mono text-slate-500" x-text="item.security_email"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-5">
+                        <div class="bg-black/20 p-4 rounded-xl border border-white/5">
+                            <p class="data-label mb-2 text-slate-500">Blockchain Record</p>
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class="w-2 h-2 rounded-full bg-sky-500 shadow-[0_0_8px_rgba(14,165,233,0.5)]"></span>
+                                <code class="text-[10px] font-mono text-slate-300 truncate"
+                                    x-text="item.blockchain_address || 'NOT_INITIALIZED'"></code>
+                            </div>
+                        </div>
+                        <div class="bg-black/20 p-4 rounded-xl border border-white/5">
+                            <p class="data-label mb-2 text-slate-500">Registry Index</p>
+                            <div class="flex items-center gap-3">
+                                <code class="text-[11px] font-black text-sky-400"
+                                    x-text="'#REG-' + item.id.toString().padStart(5,'0')"></code>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <template x-if="item.status !== 'APPROVED'">
+                            <button @click="processApproval(item.id, 'APPROVED')"
+                                class="flex-1 h-12 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black text-[10px] uppercase tracking-[0.2em] rounded-xl shadow-lg shadow-emerald-500/10 active:scale-95 transition-all">
+                                Authorize Node
+                            </button>
+                        </template>
+                        <template x-if="item.status !== 'REJECTED'">
+                            <button @click="processApproval(item.id, 'REJECTED')"
+                                class="flex-1 h-12 bg-white/5 hover:bg-rose-500/10 text-slate-400 hover:text-rose-500 border border-white/10 hover:border-rose-500/20 font-black text-[10px] uppercase tracking-[0.2em] rounded-xl active:scale-95 transition-all">
+                                Revoke Access
+                            </button>
+                        </template>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </main>
+
+    <footer class="p-8 border-t border-white/5 text-center">
+        <p class="text-[9px] font-black text-slate-600 uppercase tracking-[0.5em]">&copy; 2026 MedScan-AI Secure
+            Identity Ledger</p>
+    </footer>
+
+    <script>
+        function adminSystem() {
+            return {
+                queue: [], loading: true, refreshing: false,
+                get sortedQueue() {
+                    return [...this.queue].sort((a, b) => (a.status === 'PENDING' ? -1 : 1));
+                },
+                init() { this.fetchQueue(); },
+                async fetchQueue() {
+                    this.refreshing = true;
+                    try {
+                        const res = await fetch('http://127.0.0.1:8000/api/v1/manufacturer/list');
+                        if (res.ok) {
+                            const rawQueue = await res.json();
+                            this.queue = rawQueue.map(item => {
+                                if (item.status === 'UNVERIFIED') {
+                                    item.status = 'PENDING';
+                                }
+                                return item;
+                            });
+                        }
+                    } finally { this.loading = false; this.refreshing = false; }
+                },
+                async processApproval(id, action) {
+                    try {
+                        const res = await fetch(`http://127.0.0.1:8000/api/v1/manufacturer/approve/${id}?action=${action}`, { method: 'POST' });
+                        if (res.ok) this.fetchQueue();
+                    } catch (e) { alert("RECORD_FAILURE"); }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
